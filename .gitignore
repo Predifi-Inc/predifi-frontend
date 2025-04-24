@@ -1,0 +1,20 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+
+# vscode
+.vscode
+node_modules
+.env
+coverage
+coverage.json
+typechain
+
+node_modules
+.env
+coverage
+coverage.json
+typechain
+package-lock.json

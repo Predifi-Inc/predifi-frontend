@@ -1,0 +1,33 @@
+{
+  "name": "predifi",
+  "version": "1.0.0",
+  "description": "PrediFi is a decentralized, multi-layered options trading platform combining prediction accuracy with incentive-based liquidity provision.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "author": "Predifi",
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "ethers": "^6.13.5",
+    "framer-motion": "^10.16.1",
+    "lightningcss": "^1.29.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-compat": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.1",
+    "vite": "^6.3.2"
+  }
+}
