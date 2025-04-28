@@ -4,7 +4,14 @@ import { BiTrendingUp } from "react-icons/bi";
 import { RiBarChartBoxFill } from "react-icons/ri";
 import { HiOutlineIdentification } from "react-icons/hi";
 
-const ServiceCard = ({ color, title, icon, subtitle }) => (
+interface ServiceCardProps {
+  color: string;
+  title: string;
+  icon: React.ReactNode;
+  subtitle: string;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ color, title, icon, subtitle }) => (
   <div className="flex flex-row justify-start items-start white-glassmorphism p-3 m-2 cursor-pointer hover:shadow-xl">
     <div
       className={`w-10 h-10 rounded-full flex justify-center items-center ${color}`}
@@ -18,7 +25,7 @@ const ServiceCard = ({ color, title, icon, subtitle }) => (
   </div>
 );
 
-const Services = () => (
+const Services: React.FC = () => (
   <div className="flex w-full justify-center items-center gradient-bg-services">
     <div className="flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4">
       <div className="flex-1 flex flex-col justify-start items-start">
@@ -72,4 +79,4 @@ const Services = () => (
   </div>
 );
 
-export default Services;
+export default Services; 
