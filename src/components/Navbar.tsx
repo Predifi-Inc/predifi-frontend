@@ -1,21 +1,26 @@
-import React from "react";
+import React, { FC, useState } from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 
 import logo from "../../images/logo.png";
 
-const NavBarItem = ({ title, classprops }) => (
+interface NavBarItemProps {
+  title: string;
+  classprops?: string;
+}
+
+const NavBarItem: FC<NavBarItemProps> = ({ title, classprops }) => (
   <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>
 );
 
-const Navbar = () => {
-  const [toggleMenu, setToggleMenu] = React.useState(false);
+const Navbar: FC = () => {
+  const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
-  const menuItems = ["About", "How It Works", "No KYC", "Docs"];
+  const menuItems: string[] = ["About", "How It Works", "No KYC", "Docs"];
 
   return (
-    <nav className="w-full flex md:justify-center justify-between items-center p-4">
-      <div className="md:flex-[0.5] flex-initial justify-center items-center">
+    <nav className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="md:flex-[0.5] px-8 flex-initial justify-start items-center">
         <img src={logo} alt="logo" className="w-32 cursor-pointer" />
       </div>
       <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
@@ -54,4 +59,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 

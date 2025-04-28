@@ -1,4 +1,17 @@
-export default [
+interface Transaction {
+  id: number;
+  url: string;
+  message: string;
+  keyword: string;
+  timestamp: string;
+  addressFrom: string;
+  amount: string;
+  addressTo: string;
+  success: boolean;
+  reward: string | null;
+}
+
+const dummyData: Transaction[] = [
   {
     id: 1,
     url: "https://media.giphy.com/media/l4KibWpBGWchSqCRy/giphy.gif",
@@ -96,3 +109,5 @@ export default [
     reward: null
   },
 ];
+
+export default dummyData; 

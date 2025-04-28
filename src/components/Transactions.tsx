@@ -1,10 +1,32 @@
-import React, { useContext } from "react";
+import React, { FC, useContext } from "react";
 import { TransactionContext } from "../context/TransactionContext";
 import useFetch from "../hooks/useFetch";
 import dummyData from "../utils/dummyData";
 import { shortenAddress } from "../utils/shortenAddress";
 
-const TransactionsCard = ({ addressTo, addressFrom, timestamp, message, keyword, amount, url, success, reward }) => {
+interface TransactionCardProps {
+  addressTo: string;
+  addressFrom: string;
+  timestamp: string;
+  message?: string;
+  keyword?: string;
+  amount: string | number;
+  url?: string;
+  success?: boolean;
+  reward?: string | null;
+}
+
+const TransactionsCard: FC<TransactionCardProps> = ({ 
+  addressTo, 
+  addressFrom, 
+  timestamp, 
+  message, 
+  keyword, 
+  amount, 
+  url, 
+  success, 
+  reward 
+}) => {
   const gifUrl = useFetch({ keyword });
 
   return (
@@ -49,7 +71,7 @@ const TransactionsCard = ({ addressTo, addressFrom, timestamp, message, keyword,
   );
 };
 
-const Transactions = () => {
+const Transactions: FC = () => {
   const { transactions, currentAccount } = useContext(TransactionContext);
 
   return (
@@ -71,4 +93,4 @@ const Transactions = () => {
   );
 };
 
-export default Transactions;
+export default Transactions; 
